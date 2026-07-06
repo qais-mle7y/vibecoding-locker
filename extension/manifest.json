@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "VibeCoding Locker",
+  "version": "1.0.0",
+  "description": "Your personal code snippets, prompts, and commands available anywhere.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Open VibeCoding Locker"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://*/*"
+  ]
+}

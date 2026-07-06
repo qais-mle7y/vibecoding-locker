@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VibeCoding Locker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header>
+      <h1>VibeCoding Locker</h1>
+      <button id="settings-btn" title="Settings">⚙️</button>
+    </header>
+
+    <!-- Settings Panel (Hidden by default) -->
+    <div id="settings-panel" class="hidden">
+      <p class="help-text">Enter your Supabase project details and a valid JWT token to connect to your locker.</p>
+      
+      <label for="sb-url">Supabase URL</label>
+      <input type="text" id="sb-url" placeholder="https://xyzcompany.supabase.co">
+
+      <label for="sb-anon-key">Anon Key</label>
+      <input type="text" id="sb-anon-key" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...">
+
+      <label for="sb-jwt">JWT Auth Token</label>
+      <input type="password" id="sb-jwt" placeholder="Paste your JWT session token here...">
+
+      <button id="save-settings-btn">Save Settings</button>
+    </div>
+
+    <!-- Main Locker Panel -->
+    <div id="locker-panel">
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search snippets...">
+      </div>
+      
+      <div id="loading" class="hidden">Loading...</div>
+      <div id="error" class="hidden error-text"></div>
+      
+      <ul id="item-list">
+        <!-- Items will be injected here -->
+      </ul>
+    </div>
+    
+    <!-- Toast Notification -->
+    <div id="toast" class="hidden">Copied to clipboard!</div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
